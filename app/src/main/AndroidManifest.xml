@@ -12,20 +12,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".CriptActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".SelectCriptActivity"></activity>
         <activity
-            android:name=".CriptActivity"
-            android:label="@string/title_activity_cript"
+            android:name=".HideActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"></activity>
+
+        <activity android:name=".SelectHideActivity"></activity>
     </application>
 
 </manifest>

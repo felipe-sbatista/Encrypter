@@ -4,8 +4,8 @@
 
     <stroke
         android:width="4dp"
-        android:color="#CD853F" />
-    <solid android:color="#800000"/>
+        android:color="#800000" />
+    <solid android:color="#00FFFFFF"/>
 
     // The desired corner radius. reduce it to keep it less rounded
     <corners android:radius="360dp" />

@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button botaoEncript, botaoDescript;
+    Button botaoCript, botaoHide;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,23 +26,21 @@ public class MainActivity extends AppCompatActivity {
             requestPermissions(new String [] {Manifest.permission.READ_EXTERNAL_STORAGE}, 1001);
         }
 
-        botaoDescript = findViewById(R.id.botaoDescript);
-        botaoEncript = findViewById(R.id.botaoEncript);
+        botaoCript = findViewById(R.id.botaoCript);
+        botaoHide = findViewById(R.id.botaoHide);
 
-        botaoEncript.setOnClickListener(new View.OnClickListener(){
+        botaoCript.setOnClickListener(new View.OnClickListener(){
            @Override
            public void onClick(View view) {
-               Intent intent = new Intent(MainActivity.this, CriptActivity.class);
-               intent.putExtra("modo", "Criptografar");
+               Intent intent = new Intent(MainActivity.this, SelectCriptActivity.class);
                startActivity(intent);
            }
        });
 
-        botaoDescript.setOnClickListener(new View.OnClickListener(){
+        botaoHide.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, CriptActivity.class);
-                intent.putExtra("modo", "Descriptografar");
+                Intent intent = new Intent(MainActivity.this, SelectHideActivity.class);
                 startActivity(intent);
             }
         });
